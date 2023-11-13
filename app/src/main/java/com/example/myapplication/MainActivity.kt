@@ -21,9 +21,10 @@ class MainActivity : AppCompatActivity() {
         var registrationPasswordArray: Array<String> = resources.getStringArray(R.array.password);
 
         registrationButton.setOnClickListener{
+
             for ( i in 0..4) {
                 if ( !registrationEmail.text.toString().isEmpty() && !registrationPassword.text.toString().isEmpty() && registrationEmailArray[i] == registrationEmail.text.toString() && registrationPasswordArray[i] == registrationPassword.text.toString()) {
-                    val intent = Intent(this, SecondActivity::class.java);
+                    val intent = Intent(this, BottomActivity::class.java);
                     startActivity(intent);
                     break;
                 }
